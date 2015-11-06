@@ -1,0 +1,19 @@
+body{
+    margin:0;
+    padding:0;
+}
+.grid{
+    width:860px;
+}
+.card {
+    background-color: #696969;
+    width:95px;
+    height:95px;
+    padding:20px;
+    margin-top:7.5px; 
+    margin-bottom:7.5px;
+    margin-left:15px;
+    float:left;
+}
+
+
