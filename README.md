@@ -14,3 +14,10 @@ The game is over when the user has matched all the cards
 Each selected card should be assigned to a variable (at least). A user should only be able to select two cards at a time. If the cards do not match, each card will de-selected. And then the user should select two more cards.
 
 Next steps = What does the event listener actually do? Hold on to one card, while clicking on another.
+
+
+	// I want to put a click event listner on every div with the class of card
+	// When you click on the card it should say the card has been clicked on
+
+Sooooo....I guess I can do something with the numbers
+Match photos to the numbers...yezzz....

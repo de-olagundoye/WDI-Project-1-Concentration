@@ -2,12 +2,19 @@ body{
     margin:0;
     padding:0;
 }
+
+img {
+    margin: 0 auto;
+}
+
 .grid{
     width:860px;
+    margin: 0 auto;
 }
+
 .card {
     background-color: #696969;
-    width:95px;
+    width: 15%;
     height:95px;
     padding:20px;
     margin-top:7.5px; 
@@ -16,4 +23,63 @@ body{
     float:left;
 }
 
+.hideCard {
 
+  display: none;
+}
+
+.imageOne {
+	background: url("images/1.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+}
+
+.imageTwo {
+	background: url("images/2.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+}
+
+.imageThree {
+	background: url("images/3.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+}
+
+.imageFour {
+	background: url("images/4.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+}
+
+.imageFive {
+	background: url("images/5.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+}
+
+.imageSix {
+	background: url("images/6.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+}
+
+.imageSeven {
+	background: url("images/7.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+}
+
+.imageEight {
+	background: url("images/8.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+}
