@@ -1,7 +1,4 @@
-
 $(document).ready(function(){
-
-	var $allTheCards = $('.card')
 	var $card1 = $('#cd1');
 	var $card2 = $('#cd2');
 	var $card3 = $('#cd3');
@@ -18,77 +15,58 @@ $(document).ready(function(){
 	var $card14 = $('#cd14');
 	var $card15 = $('#cd15');
 	var $card16 = $('#cd16');
+	var $resetButton = $('#resetButton');
+	var firstCard;
+	var secondCard;
+
+	var $allTheCards = [$card1, $card2, $card3, $card4, $card5, $card6, $card7, $card8, $card9, $card10, $card11, $card12, $card13, $card14, $card15, $card16];
+
+	var $theImages = ['imageOne', 'imageTwo', 'imageThree', 'imageFour', 'imageFive', 'imageSix', 'imageSeven', 'imageEight', 'imageOne', 'imageTwo', 'imageThree', 'imageFour', 'imageFive', 'imageSix', 'imageSeven', 'imageEight']
+
+
+	var assignImages = function() {
+		for (i=0; i<$theImages.length; i++)
+			$allTheCards[i].addClass($theImages[i]).on('click', handleClick);
+	};
+
 
 	var handleClick = function (event){
 		var $theCard = $(event.target);
+		firstCard = $theCard.attr('class');
+		$theCard.removeClass('card');
+		$theCard.off('click', handleClick);
+		$theCard.on('click', newHandleClick);
+	};
 
-		if ($theCard.attr('id') === $card1.attr('id')) {
-			console.log("1");
+	var newHandleClick = function(event){
+		var $theCard = $(event.target);
+		secondCard = $theCard.attr('class');
+		$theCard.removeClass('card');
 
-		} else if ($theCard.attr('id') === $card2.attr('id')) {
-			console.log("2");
-
-		} else if ($theCard.attr('id') === $card3.attr('id')) {
-			console.log("3");
-
-		} else if ($theCard.attr('id') === $card4.attr('id')) {
-			console.log("4");
-
-		} else if ($theCard.attr('id') === $card5.attr('id')) {
-			console.log("5");
-
-		} else if ($theCard.attr('id') === $card6.attr('id')) {
-			console.log("6");
-
-		} else if ($theCard.attr('id') === $card7.attr('id')) {
-			console.log("7");
-
-		} else if ($theCard.attr('id') === $card8.attr('id')) {
-			console.log("8");
-
-		} else if ($theCard.attr('id') === $card9.attr('id')) {
-			console.log("9");
-
-		} else if ($theCard.attr('id') === $card10.attr('id')) {
-			console.log("10");
-
-
-		} else if ($theCard.attr('id') === $card11.attr('id')) {
-			console.log("11");
-
-		} else if ($theCard.attr('id') === $card12.attr('id')) {
-			console.log("12");
-
-		} else if ($theCard.attr('id') === $card13.attr('id')) {
-			console.log("13");
-
-		} else if ($theCard.attr('id') === $card14.attr('id')) {
-			console.log("14");
-
-		} else if ($theCard.attr('id') === $card15.attr('id')) {
-			console.log("15");
-
-		} else if ($theCard.attr('id') === $card16.attr('id')) {
-			console.log("16");
+		if (firstCard === secondCard){
+			console.log('match');
 		}
 	};
 
-		$card1.on('click', handleClick);
-		$card2.on('click', handleClick);
-		$card3.on('click', handleClick);
-		$card4.on('click', handleClick);
-		$card5.on('click', handleClick);
-		$card6.on('click', handleClick);
-		$card7.on('click', handleClick);
-		$card8.on('click', handleClick);
-		$card9.on('click', handleClick);
-		$card10.on('click', handleClick);
-		$card11.on('click', handleClick);
-		$card12.on('click', handleClick);
-		$card13.on('click', handleClick);
-		$card14.on('click', handleClick);
-		$card15.on('click', handleClick);
-		$card16.on('click', handleClick);
+
+	var getRandomIndex = function (array) {
+ 		return Math.floor(Math.random() * (array.length));
+	};
+
+    var shuffleTheDeck = function(){
+	for (i=0; i<$theImages.length; i++)
+    	$allTheCards[i].addClass(getRandomIndex($theImages));
+	};
 
 
-	});
+	var resetPlz = function(){
+	for (i=0; i<$theImages.length; i++)
+   		$allTheCards[i].addClass('card');
+		shuffleTheDeck()
+	};
+
+	$resetButton.on('click', resetPlz);
+
+	assignImages();
+
+});

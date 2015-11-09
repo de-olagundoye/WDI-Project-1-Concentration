@@ -19,5 +19,4 @@ Next steps = What does the event listener actually do? Hold on to one card, whil
 	// I want to put a click event listner on every div with the class of card
 	// When you click on the card it should say the card has been clicked on
 
-Sooooo....I guess I can do something with the numbers
-Match photos to the numbers...yezzz....
+De Olagundoye vs. WDI Project I...a Concentration Game Starring Kim Kardashian as De Olagundoye

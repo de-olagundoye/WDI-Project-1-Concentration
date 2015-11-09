@@ -3,17 +3,126 @@ body{
     padding:0;
 }
 
-img {
-    margin: 0 auto;
-}
-
 .grid{
     width:860px;
     margin: 0 auto;
 }
 
+.imageOne {
+	background: url("images/1.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+	width: 15%;
+	height:95px;
+    padding:20px;
+    margin-top:7.5px; 
+    margin-bottom:7.5px;
+    margin-left:15px;
+    float:left;
+}
+
+.imageTwo {
+	background: url("images/2.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+	width: 15%;
+	height:95px;
+    padding:20px;
+    margin-top:7.5px; 
+    margin-bottom:7.5px;
+    margin-left:15px;
+    float:left;
+}
+
+.imageThree {
+	background: url("images/3.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+	width: 15%;
+	height:95px;
+    padding:20px;
+    margin-top:7.5px; 
+    margin-bottom:7.5px;
+    margin-left:15px;
+    float:left;
+
+}
+
+.imageFour {
+	background: url("images/4.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+	width: 15%;
+	height:95px;
+    padding:20px;
+    margin-top:7.5px; 
+    margin-bottom:7.5px;
+    margin-left:15px;
+    float:left;
+}
+
+.imageFive {
+	background: url("images/5.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+	width: 15%;
+	height:95px;
+    padding:20px;
+    margin-top:7.5px; 
+    margin-bottom:7.5px;
+    margin-left:15px;
+    float:left;
+}
+
+.imageSix {
+	background: url("images/6.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+	width: 15%;
+	height:95px;
+    padding:20px;
+    margin-top:7.5px; 
+    margin-bottom:7.5px;
+    margin-left:15px;
+    float:left;
+}
+
+.imageSeven {
+	background: url("images/7.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+	width: 15%;
+	height:95px;
+    padding:20px;
+    margin-top:7.5px; 
+    margin-bottom:7.5px;
+    margin-left:15px;
+    float:left; 
+}
+
+.imageEight {
+	background: url("images/8.jpg");
+	background-repeat: no-repeat;
+	vertical-align: center;
+	background-size: 170px 170px; 
+	width: 15%;
+	height:95px;
+    padding:20px;
+    margin-top:7.5px; 
+    margin-bottom:7.5px;
+    margin-left:15px;
+    float:left;
+}
+
 .card {
-    background-color: #696969;
+	background: url("images/logo.jpg");
     width: 15%;
     height:95px;
     padding:20px;
@@ -23,63 +132,15 @@ img {
     float:left;
 }
 
-.hideCard {
-
-  display: none;
-}
-
-.imageOne {
-	background: url("images/1.jpg");
-	background-repeat: no-repeat;
-	vertical-align: center;
-	background-size: 170px 170px; 
-}
-
-.imageTwo {
-	background: url("images/2.jpg");
-	background-repeat: no-repeat;
-	vertical-align: center;
-	background-size: 170px 170px; 
-}
-
-.imageThree {
-	background: url("images/3.jpg");
-	background-repeat: no-repeat;
-	vertical-align: center;
-	background-size: 170px 170px; 
-}
-
-.imageFour {
-	background: url("images/4.jpg");
-	background-repeat: no-repeat;
-	vertical-align: center;
-	background-size: 170px 170px; 
-}
-
-.imageFive {
-	background: url("images/5.jpg");
-	background-repeat: no-repeat;
-	vertical-align: center;
-	background-size: 170px 170px; 
-}
-
-.imageSix {
-	background: url("images/6.jpg");
-	background-repeat: no-repeat;
-	vertical-align: center;
-	background-size: 170px 170px; 
-}
-
-.imageSeven {
-	background: url("images/7.jpg");
-	background-repeat: no-repeat;
-	vertical-align: center;
-	background-size: 170px 170px; 
-}
-
-.imageEight {
-	background: url("images/8.jpg");
-	background-repeat: no-repeat;
-	vertical-align: center;
-	background-size: 170px 170px; 
+#resetButton {
+    margin: 0 auto;
+    display: block;
+    width: 30%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+    background-color: #000000;
+    border-radius: 10px;
 }
