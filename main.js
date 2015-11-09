@@ -34,7 +34,7 @@ $(document).ready(function(){
 		var $theCard = $(event.target);
 		firstCard = $theCard.attr('class');
 		$theCard.removeClass('card');
-		$theCard.off('click', handleClick);
+		$theCard.off();
 		$theCard.on('click', newHandleClick);
 	};
 
@@ -54,15 +54,19 @@ $(document).ready(function(){
 	};
 
     var shuffleTheDeck = function(){
-	for (i=0; i<$theImages.length; i++)
-    	$allTheCards[i].addClass(getRandomIndex($theImages));
+		for (i=0; i<$theImages.length; i++) {
+    		$allTheCards[i].addClass(getRandomIndex($theImages)); {
+    		return $allTheCards[i];
+			}
+		}
 	};
 
 
-	var resetPlz = function(){
-	for (i=0; i<$theImages.length; i++)
-   		$allTheCards[i].addClass('card');
-		shuffleTheDeck()
+	var resetPlz = function() {
+		for (i=0; i<$theImages.length; i++) {
+   			$allTheCards[i].addClass('card');
+			shuffleTheDeck($theImages);
+		}
 	};
 
 	$resetButton.on('click', resetPlz);
