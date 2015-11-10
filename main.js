@@ -1,3 +1,5 @@
+var cardsMatched = [];
+
 $(document).ready(function(){
 	var $card1 = $('#cd1');
 	var $card2 = $('#cd2');
@@ -16,56 +18,53 @@ $(document).ready(function(){
 	var $card15 = $('#cd15');
 	var $card16 = $('#cd16');
 	var $resetButton = $('#resetButton');
-	var firstCard;
-	var secondCard;
+	var cardsClicked = [];
+	var pickOne;
+	var pickTwo;
 
 	var $allTheCards = [$card1, $card2, $card3, $card4, $card5, $card6, $card7, $card8, $card9, $card10, $card11, $card12, $card13, $card14, $card15, $card16];
 
-	var $theImages = ['imageOne', 'imageTwo', 'imageThree', 'imageFour', 'imageFive', 'imageSix', 'imageSeven', 'imageEight', 'imageOne', 'imageTwo', 'imageThree', 'imageFour', 'imageFive', 'imageSix', 'imageSeven', 'imageEight']
+	var $theImages = ['imageOne', 'imageTwo', 'imageThree', 'imageFour', 'imageFive', 'imageSix', 'imageSeven', 'imageEight', 'imageOne', 'imageTwo', 'imageThree', 'imageFour', 'imageFive', 'imageSix', 'imageSeven', 'imageEight'];
 
 
-	var assignImages = function() {
-		for (i=0; i<$theImages.length; i++)
+	assignImages = function() {
+		for (var i=0; i<$theImages.length; i++)
 			$allTheCards[i].addClass($theImages[i]).on('click', handleClick);
 	};
 
-
 	var handleClick = function (event){
-		var $theCard = $(event.target);
-		firstCard = $theCard.attr('class');
-		$theCard.removeClass('card');
-		$theCard.off();
-		$theCard.on('click', newHandleClick);
-	};
+		var $target = $(event.target);
+			$target.removeClass('card');
+			cardsClicked.push($target);
 
-	var newHandleClick = function(event){
-		var $theCard = $(event.target);
-		secondCard = $theCard.attr('class');
-		$theCard.removeClass('card');
+			var pickOne = cardsClicked[0]
+			var pickTwo = cardsClicked[1];
 
-		if (firstCard === secondCard){
-			console.log('match');
-		}
-	};
+			if (cardsClicked.length === 2) {
+				cardsMatched.push($target);
 
+			if (cardsClicked[0].attr('class') == cardsClicked[1].attr('class')) {
+				$target.off('click', handleClick);
+				cardsMatched.push(pickOne, pickTwo);
+				cardsClicked.splice(0, 2);
 
-	var getRandomIndex = function (array) {
- 		return Math.floor(Math.random() * (array.length));
-	};
+			} else if (cardsClicked[0] !== cardsClicked[1]) {
+				window.setTimeout(function() {
+					pickOne.addClass('card');
+					pickTwo.addClass('card');
+				}, 500);
+				cardsClicked.splice(0, 2);
 
-    var shuffleTheDeck = function(){
-		for (i=0; i<$theImages.length; i++) {
-    		$allTheCards[i].addClass(getRandomIndex($theImages)); {
-    		return $allTheCards[i];
+			} else if (cardsMatched.length === 24) {
+				console.log ("you win!");
 			}
 		}
 	};
 
-
 	var resetPlz = function() {
-		for (i=0; i<$theImages.length; i++) {
+		for (var i=0; i<$theImages.length; i++) {
    			$allTheCards[i].addClass('card');
-			shuffleTheDeck($theImages);
+   			cardsMatched = [];
 		}
 	};
 
