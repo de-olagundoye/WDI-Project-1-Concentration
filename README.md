@@ -14,7 +14,7 @@
 
 
 ### Front-End Wireframes
-![wireframe](images.ConcentrationWireFrame.jpg)
+![wireframe](images/ConcentrationWireFrame.jpg)
 
 
 ### List of Technologies Used
