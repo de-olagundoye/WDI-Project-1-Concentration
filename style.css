@@ -1,14 +1,18 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 @import url(https://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
 
-body{
+body {
     background: url('images/glitter7.jpg');
     display: block;
     margin:0;
-    background-color: black;
 }
+
+footer{
+    height: 50px;
+}
+
 h1,
-h3{
+h3 {
     display: block;
     text-align: center;
     font-family: 'Cardo', serif;
@@ -16,15 +20,16 @@ h3{
     color: #CC9900;
 }
 
-h2{
+h2 {
     display: block;
     text-align: center;  
     font-family: 'Dancing Script', cursive; 
     font-size: 50px;
+    line-height: 90%;    
     color: #CC9900;
 }
 
-.grid{
+.grid {
     display: block;
     width: 70%;
     margin: 0 auto;
