@@ -32,6 +32,7 @@
 A fun, easy, classic game. Match all the tiles for a win!
 
 ### Link to Playable Game
+http://de-olagundoye.github.io/WDI_Project_1_Concentration/
 
 ### Sources
 
